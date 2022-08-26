@@ -15,13 +15,10 @@ public class DevProfileSysOut {
     private String msg;
 
     public DevProfileSysOut(String msg) {
-        this.msg = msg;
-    }
-
-    public DevProfileSysOut() {
         System.out.println("##################################");
         System.out.println("##################################");
         System.out.println("##              DEV             ##");
+        System.out.println(msg);
         System.out.println("##################################");
         System.out.println("##################################");
     }
