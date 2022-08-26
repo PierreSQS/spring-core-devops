@@ -11,10 +11,7 @@ import org.springframework.stereotype.Component;
 @Profile("dev")
 public class DevProfileSysOut {
 
-    @Value("${guru.springframework.profile.message}")
-    private String msg;
-
-    public DevProfileSysOut() {
+    public DevProfileSysOut(@Value("${guru.springframework.profile.message}") String msg) {
         System.out.println("##################################");
         System.out.println("##################################");
         System.out.println("##              DEV             ##");
