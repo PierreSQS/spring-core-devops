@@ -13,9 +13,11 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @Import(DataSourceConfig.class)
-@ActiveProfiles("qa")
+@ActiveProfiles("prod")
 public class DataSourceTest {
 
     private FakeDataSource fakeDataSource;
@@ -27,6 +29,8 @@ public class DataSourceTest {
 
     @Test
     public void TestDataSource() {
+
+        assertThat(fakeDataSource).isNotNull();
 
         System.out.println(fakeDataSource.getConnectionInfo());
 

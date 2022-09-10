@@ -21,7 +21,7 @@ public class PropertySourceEnvTest {
     FakeJmsBroker fakeJmsBroker;
 
     @Test
-    public void testPropsSet() throws Exception {
+    public void testPropsSet() {
         assertEquals("10.10.10.123", fakeJmsBroker.getUrl());
         assertEquals(3330, fakeJmsBroker.getPort().intValue());
         assertEquals("Ron", fakeJmsBroker.getUser());
